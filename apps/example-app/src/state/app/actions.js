@@ -1,0 +1,2 @@
+const APP = 'APP';
+export const UPDATE_SELECTED_TAB_INDEX = `${APP}.UPDATE_SELECTED_TAB_INDEX`;
