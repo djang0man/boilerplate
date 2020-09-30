@@ -1,5 +1,5 @@
 // libs
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ErrorHandler extends Component {
   constructor(props) {
@@ -21,14 +21,14 @@ class ErrorHandler extends Component {
 
   render() {
     if (this.state.hasError) {
-      console.log('Error:', this.state.error);
+      console.log("Error:", this.state.error);
       return (
         <div>
           <h1>Error</h1>
           <b>{this.state.error.toString()}</b>
           <br />
           <code>
-            {this.state.errorInfo.componentStack.split('\n').map((stack) => (
+            {this.state.errorInfo.componentStack.split("\n").map((stack) => (
               <p key={stack}>{stack}</p>
             ))}
           </code>

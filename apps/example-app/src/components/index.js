@@ -1,3 +1,3 @@
-import SimpleMenu from './menu';
+import SimpleMenu from "./menu";
 
 export { SimpleMenu };

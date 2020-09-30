@@ -1,4 +1,4 @@
-const EXAMPLE_APP = 'EXAMPLE_APP';
+const EXAMPLE_APP = "EXAMPLE_APP";
 
 export const ExampleAppActions = {
   INIT_EXAMPLE_APP: `${EXAMPLE_APP}.INIT_EXAMPLE_APP`,

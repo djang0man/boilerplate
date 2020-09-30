@@ -1,7 +1,7 @@
 // config
-import { routeConfig } from './route-config';
+import { routeConfig } from "./route-config";
 
-import { pageTwo } from './routes';
+import { pageTwo } from "./routes";
 
 const getTabIndex = (pathname) => {
   switch (pathname) {

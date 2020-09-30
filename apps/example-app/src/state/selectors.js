@@ -1,7 +1,7 @@
 // libs
-import { createSelector } from 'reselect';
+import { createSelector } from "reselect";
 
-const exampleAppStateSelector = (state) => state?.EXAMPLE_APP.exampleApp;
+const exampleAppStateSelector = (state) => state?.EXAMPLE;
 
 export const selectExampleAppName = createSelector(
   exampleAppStateSelector,

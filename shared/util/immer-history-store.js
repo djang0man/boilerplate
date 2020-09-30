@@ -1,15 +1,15 @@
-import { applyMiddleware, compose, createStore } from 'redux';
-import { createBrowserHistory } from 'history';
+import { applyMiddleware, compose, createStore } from "redux";
+import { createBrowserHistory } from "history";
 import {
   connectRouter,
   routerMiddleware,
-} from 'connected-react-router/immutable';
+} from "connected-react-router/immutable";
 
-import { combineReducers } from 'redux-immer';
-import { createLogger } from 'redux-logger';
-import createSagaMiddleware from 'redux-saga';
+import { combineReducers } from "redux-immer";
+import { createLogger } from "redux-logger";
+import createSagaMiddleware from "redux-saga";
 
-import produce from 'immer';
+import produce from "immer";
 
 export const immerHistory = createBrowserHistory();
 
@@ -37,7 +37,7 @@ export const buildImmerStore = ({
   const middleware = [sagaMiddleware, routeMiddleware, ...customMiddlewares];
 
   let composed;
-  if (NODE_ENV === 'development') {
+  if (NODE_ENV === "development") {
     if (REDUX_DEVTOOLS) {
       composed = composeEnhancers(applyMiddleware(...middleware));
     } else {

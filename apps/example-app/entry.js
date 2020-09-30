@@ -1,2 +1,2 @@
-import './public-path';
-import './index';
+import "./public-path";
+import "./index";

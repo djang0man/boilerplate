@@ -1,14 +1,14 @@
-import { all, put, select, takeLatest } from 'redux-saga/effects';
-import { v4 as uuidv4 } from 'uuid';
+import { all, put, select, takeLatest } from "redux-saga/effects";
+import { v4 as uuidv4 } from "uuid";
 
 // helpers
-import { buildAction } from '@boilerplate/shared/util';
+import { buildAction } from "@boilerplate/shared/util";
 
 // actions
-import { ExampleAppActions } from '@boilerplate/example-app/state/actions';
+import { ExampleAppActions } from "@boilerplate/example-app/state/actions";
 
 // services
-import svc from '@boilerplate/example-app/service';
+import svc from "@boilerplate/example-app/service";
 
 // sagas
 export function* createExample() {
@@ -16,8 +16,8 @@ export function* createExample() {
 
   const example = {
     exampleUUID,
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     updatedAt: null,
   };
 
