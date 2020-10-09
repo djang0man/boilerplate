@@ -2,18 +2,19 @@
 import { createSelector } from "reselect";
 
 const exampleAppStateSelector = (state) => state?.EXAMPLE;
+const exampleAppStateApisHandlers = (state) => state?.EXAMPLE?.apisHandlers;
 
-export const selectExampleAppName = createSelector(
+export const selectExampleAppCat = createSelector(
   exampleAppStateSelector,
-  (state) => state?.name
+  (state) => state?.cat
 );
 
-export const selectExampleAppDescription = createSelector(
+export const selectExampleAppCats = createSelector(
   exampleAppStateSelector,
-  (state) => state?.description
+  (state) => state?.cats
 );
 
-export const selectExampleAppPosts = createSelector(
-  exampleAppStateSelector,
-  (state) => state?.posts
+export const selectCatFetchIsLoading = createSelector(
+  exampleAppStateApisHandlers,
+  (state) => state?.catFetch?.isLoading
 );

@@ -17,7 +17,10 @@ import { Container, Item } from "@boilerplate/shared/components";
 import { buildAction } from "@boilerplate/shared/util";
 
 // selectors
-import { selectExampleAppPosts } from "@boilerplate/example-app/state/selectors";
+import {
+  selectExampleAppCat,
+  selectExampleAppCats,
+} from "@boilerplate/example-app/state/selectors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,22 +49,12 @@ const PageOne = (props) => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const [cat, setCat] = useState();
+  const [cat, setCat] = useState({});
   const [cats, setCats] = useState([]);
   const [currentCat, setCurrentCat] = useState(0);
 
-  const apiCat = useSelector(selectExampleAppPosts);
-
-  useEffect(() => {
-    fetchCat();
-  }, []);
-
-  useEffect(() => {
-    if (cat !== apiCat) {
-      setCat(apiCat);
-      setCats([...cats, ...apiCat]);
-    }
-  }, [apiCat]);
+  const apiCat = useSelector(selectExampleAppCat);
+  const apiCats = useSelector(selectExampleAppCats);
 
   const fetchCat = () => {
     dispatch(buildAction(ExampleAppActions.FETCH_EXAMPLE));
@@ -71,6 +64,22 @@ const PageOne = (props) => {
     fetchCat();
     setCurrentCat(currentCat + 1);
   };
+
+  useEffect(() => {
+    fetchCat();
+  }, []);
+
+  useEffect(() => {
+    if (cat !== apiCat) {
+      setCat(apiCat);
+    }
+  }, [apiCat]);
+
+  useEffect(() => {
+    if (cats !== apiCats) {
+      setCats(apiCats);
+    }
+  }, [apiCats]);
 
   const prevCatDisabled = currentCat === 0;
   const nextCatDisabled = currentCat === cats.length - 1;
