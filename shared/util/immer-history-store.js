@@ -10,7 +10,7 @@ import produce from 'immer';
 
 export const immerHistory = createBrowserHistory();
 
-let { NODE_ENV, REDUX_DEVTOOLS } = process.env;
+const { NODE_ENV, REDUX_DEVTOOLS } = process.env;
 
 const logger = createLogger({
   collapsed: true,

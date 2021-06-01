@@ -33,7 +33,7 @@ const entryPoints = {
   ]
 };
 
-let plugins = [];
+const plugins = [];
 
 module.exports = {
   target: 'web',

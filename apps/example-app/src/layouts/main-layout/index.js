@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 
 const MainLayout = props => {
   const { children } = props;
-  let componentToLoad = children;
+  const componentToLoad = children;
 
   const classes = useStyles();
 
