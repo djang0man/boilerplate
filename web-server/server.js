@@ -87,3 +87,4 @@ app.use(async (ctx, next) => {
 
 // start server
 http.createServer(app.use(router.routes()).use(router.allowedMethods()).callback()).listen(PORT);
+console.log(`Listening on PORT: ${PORT}`);
