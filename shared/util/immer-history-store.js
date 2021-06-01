@@ -1,9 +1,6 @@
 import { applyMiddleware, compose, createStore } from "redux";
 import { createBrowserHistory } from "history";
-import {
-  connectRouter,
-  routerMiddleware,
-} from "connected-react-router/immutable";
+import { connectRouter, routerMiddleware } from "connected-react-router";
 
 import { combineReducers } from "redux-immer";
 import { createLogger } from "redux-logger";

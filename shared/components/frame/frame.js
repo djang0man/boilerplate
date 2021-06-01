@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { ErrorHandler } from "@boilerplate/shared/components";
-import { ConnectedRouter } from "connected-react-router/immutable";
+import { ConnectedRouter } from "connected-react-router";
 
 // material-ui
 import { MuiThemeProvider } from "@material-ui/core/styles";
