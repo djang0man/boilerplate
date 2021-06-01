@@ -1,49 +1,49 @@
 // libs
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import Button from "@material-ui/core/Button";
+import Button from '@material-ui/core/Button';
 
 // material-ui
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 // actions
-import { ExampleAppActions } from "@boilerplate/example-app/state/actions";
+import { ExampleAppActions } from '@boilerplate/example-app/state/actions';
 
 // components
-import { Container, Item } from "@boilerplate/shared/components";
+import { Container, Item } from '@boilerplate/shared/components';
 
 // helpers
-import { buildAction } from "@boilerplate/shared/util";
+import { buildAction } from '@boilerplate/shared/util';
 
 // selectors
 import {
   selectExampleAppCat,
   selectExampleAppCats,
-} from "@boilerplate/example-app/state/selectors";
+} from '@boilerplate/example-app/state/selectors';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: 400,
-    fontFamily: "Arial",
+    fontFamily: 'Arial',
   },
   main: {
-    padding: "1.25em",
-    background: "#EEE",
+    padding: '1.25em',
+    background: '#EEE',
   },
   container: {
-    margin: "0 0 1.25em",
+    margin: '0 0 1.25em',
   },
   img: {
-    width: "100%",
-    marginBottom: ".5em",
+    width: '100%',
+    marginBottom: '.5em',
   },
   stat: {
-    marginBottom: ".5em",
+    marginBottom: '.5em',
   },
 }));
 
-const PageOne = (props) => {
+const PageOne = props => {
   const {} = props;
 
   const classes = useStyles();
@@ -123,11 +123,11 @@ const PageOne = (props) => {
                       </a>
                     </Item>
                   </Container>
-                  <Container justify={"flex-end"}>
+                  <Container justify={'flex-end'}>
                     <Item>
                       <Button
-                        color={"secondary"}
-                        variant={"outlined"}
+                        color={'secondary'}
+                        variant={'outlined'}
                         onClick={() => getCat()}
                       >
                         Get Cat
@@ -138,12 +138,12 @@ const PageOne = (props) => {
               </Container>
               <Container
                 className={classes.container}
-                justify={"space-between"}
+                justify={'space-between'}
               >
                 <Item>
                   <Button
-                    color={"secondary"}
-                    variant={"outlined"}
+                    color={'secondary'}
+                    variant={'outlined'}
                     disabled={prevCatDisabled}
                     onClick={() => getPrevCat()}
                   >
@@ -152,8 +152,8 @@ const PageOne = (props) => {
                 </Item>
                 <Item>
                   <Button
-                    color={"secondary"}
-                    variant={"outlined"}
+                    color={'secondary'}
+                    variant={'outlined'}
                     disabled={nextCatDisabled}
                     onClick={() => getNextCat()}
                   >

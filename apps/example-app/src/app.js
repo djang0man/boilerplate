@@ -1,24 +1,24 @@
 // libs
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // global styles
-import theme from "@boilerplate/shared/styles/material-theme";
+import theme from '@boilerplate/shared/styles/material-theme';
 
 // helpers
-import { immerHistory, buildImmerStore } from "@boilerplate/shared/util";
+import { immerHistory, buildImmerStore } from '@boilerplate/shared/util';
 
 // routes
-import { ApplicationRoutes } from "@boilerplate/example-app/routing/application-routes";
+import { ApplicationRoutes } from '@boilerplate/example-app/routing/application-routes';
 
 // shared state
-import * as APP from "@boilerplate/example-app/state/app";
+import * as APP from '@boilerplate/example-app/state/app';
 
 // application state
-import * as EXAMPLE from "@boilerplate/example-app/state";
+import * as EXAMPLE from '@boilerplate/example-app/state';
 
 // components
-import { Frame } from "@boilerplate/shared/components";
+import { Frame } from '@boilerplate/shared/components';
 
 const store = buildImmerStore({
   customMiddlewares: [],
@@ -29,7 +29,7 @@ const store = buildImmerStore({
   sagas: [APP.sagas, EXAMPLE.sagas],
 });
 
-store.dispatch({ type: "STORE_INITIALIZED" });
+store.dispatch({ type: 'STORE_INITIALIZED' });
 
 function renderApp() {
   // ( ͝° ͜ʖ͡°)
@@ -37,7 +37,7 @@ function renderApp() {
     <Frame theme={theme} store={store} history={immerHistory}>
       <ApplicationRoutes />
     </Frame>,
-    document.getElementById("example-app")
+    document.getElementById('example-app')
   );
 }
 

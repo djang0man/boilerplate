@@ -1,3 +1,3 @@
-import { SetPublicPath } from "@boilerplate/shared/util";
+import { SetPublicPath } from '@boilerplate/shared/util';
 
 SetPublicPath();

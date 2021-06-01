@@ -1,8 +1,8 @@
 // libs
-import { handleActions } from "redux-actions";
+import { handleActions } from 'redux-actions';
 
 // actions
-import { ExampleAppActions } from "@boilerplate/example-app/state/actions";
+import { ExampleAppActions } from '@boilerplate/example-app/state/actions';
 
 export const initialExampleAppState = {};
 
@@ -11,7 +11,7 @@ export const initialState = {
   cats: [],
   apisHandlers: {
     catFetch: {
-      errorMessage: "",
+      errorMessage: '',
       isLoading: false,
     },
   },

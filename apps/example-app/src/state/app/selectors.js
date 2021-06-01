@@ -1,1 +1,1 @@
-export const selectCurrentTabIndex = (state) => state.APP.currentTabIndex;
+export const selectCurrentTabIndex = state => state.APP.currentTabIndex;

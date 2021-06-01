@@ -1,4 +1,4 @@
-const EXAMPLE_APP = "EXAMPLE_APP";
+const EXAMPLE_APP = 'EXAMPLE_APP';
 
 export const ExampleAppActions = {
   FETCH_EXAMPLE: `${EXAMPLE_APP}.FETCH_EXAMPLE`,

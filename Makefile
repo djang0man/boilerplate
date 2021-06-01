@@ -1,4 +1,3 @@
-JEST    := node_modules/.bin/jest
 NODEMON := node_modules/.bin/nodemon
 WEBPACK := node_modules/.bin/webpack
 LINT    :=  node_modules/.bin/prettylint
@@ -22,15 +21,15 @@ start:
 	npm start
 
 pdev:
-	REDUX_DEVTOOLS=true IS_PRETTIER=true VERSION=dev $(WEBPACK) --config ./build/webpack.dev.js -w --colors --progress
+	REDUX_DEVTOOLS=true IS_PRETTIER=true VERSION=dev $(WEBPACK) --config ./build/webpack.dev.js -w --progress
 
 pretty:
-	$(LINT) --config .prettierrc.yaml --fix "apps/**/*.js"
-	$(LINT) --config .prettierrc.yaml --fix "shared/**/*.js"
+	$(LINT) --config .prettierrc.json --fix "apps/**/*.js"
+	$(LINT) --config .prettierrc.json --fix "shared/**/*.js"
 
 lint:
-	$(LINT) --config .prettierrc.yaml "apps/**/*.js"
-	$(LINT) --config .prettierrc.yaml "shared/**/*.js"
+	$(LINT) --config .prettierrc.json "apps/**/*.js"
+	$(LINT) --config .prettierrc.json "shared/**/*.js"
 
 server:
 	$(NODEMON) ./web-server/server.js

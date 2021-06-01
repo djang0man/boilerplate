@@ -1,31 +1,31 @@
 // libs
-import React from "react";
+import React from 'react';
 
 // material-ui
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core';
 
 // components
-import { Container, Item } from "@boilerplate/shared/components";
-import { SimpleMenu } from "@boilerplate/example-app/components";
+import { Container, Item } from '@boilerplate/shared/components';
+import { SimpleMenu } from '@boilerplate/example-app/components';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   mainContentWrapper: {
-    width: "100%",
+    width: '100%',
   },
   mainContent: {
-    margin: "0 auto",
+    margin: '0 auto',
     maxWidth: theme.breakpoints.values.lg,
-    padding: "2em",
-    [theme.breakpoints.up("md")]: {
-      padding: "32px 80px",
+    padding: '2em',
+    [theme.breakpoints.up('md')]: {
+      padding: '32px 80px',
     },
   },
 }));
 
-const MainLayout = (props) => {
+const MainLayout = props => {
   const { children } = props;
   let componentToLoad = children;
 

@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // routes
-import { routeConfig, getTabIndex } from "@boilerplate/example-app/routing";
+import { routeConfig, getTabIndex } from '@boilerplate/example-app/routing';
 
 // actions
-import * as APP from "@boilerplate/example-app/state/app/actions";
+import * as APP from '@boilerplate/example-app/state/app/actions';
 
 // selectors
-import { selectCurrentTabIndex } from "@boilerplate/example-app/state/app/selectors";
+import { selectCurrentTabIndex } from '@boilerplate/example-app/state/app/selectors';
 
 // utils
-import { buildAction, immerHistory } from "@boilerplate/shared/util";
+import { buildAction, immerHistory } from '@boilerplate/shared/util';
 
 const SimpleMenu = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const SimpleMenu = () => {
 
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -32,7 +32,7 @@ const SimpleMenu = () => {
     setAnchorEl(null);
   };
 
-  const handleSelect = (path) => {
+  const handleSelect = path => {
     const selectedTabIndex = getTabIndex(path);
     if (currentTabIndex !== selectedTabIndex) {
       immerHistory.push(path);
